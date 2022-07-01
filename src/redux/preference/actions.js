@@ -1,7 +1,13 @@
-import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE } from './types';
+import {
+  UPDATE_DATE_TYPE,
+  UPDATE_LANGUAGE,
+  UPDATE_OPTIONS,
+  UPDATE_AUTH_TOKEN,
+  UPDATE_VIEW_TYPE,
+} from "./types";
 
 export const updateOptions = function (options) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({
       type: UPDATE_OPTIONS,
       payload: options,
@@ -9,29 +15,38 @@ export const updateOptions = function (options) {
   };
 };
 
-export const updateViewType = function (viewType = 'grid') {
-  return dispatch => {
+export const updateAuthToken = function (oauth) {
+  return (dispatch) => {
+    dispatch({
+      type: UPDATE_AUTH_TOKEN,
+      payload: oauth,
+    });
+  };
+};
+
+export const updateViewType = function (viewType = "grid") {
+  return (dispatch) => {
     dispatch({
       type: UPDATE_VIEW_TYPE,
-      payload: viewType
+      payload: viewType,
     });
   };
 };
 
 export const updateLanguage = function (language) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({
       type: UPDATE_LANGUAGE,
-      payload: language
+      payload: language,
     });
   };
 };
 
 export const updateDateJump = function (dateJump) {
-  return dispatch => {
+  return (dispatch) => {
     dispatch({
       type: UPDATE_DATE_TYPE,
-      payload: dateJump
+      payload: dateJump,
     });
   };
 };

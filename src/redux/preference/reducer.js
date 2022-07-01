@@ -1,11 +1,17 @@
-import { UPDATE_DATE_TYPE, UPDATE_LANGUAGE, UPDATE_OPTIONS, UPDATE_VIEW_TYPE } from './types';
+import {
+  UPDATE_DATE_TYPE,
+  UPDATE_LANGUAGE,
+  UPDATE_OPTIONS,
+  UPDATE_VIEW_TYPE,
+  UPDATE_AUTH_TOKEN,
+} from "./types";
 
 const initialState = {
-  viewType: 'list',
-  dateJump: 'week',
-  language: '',
+  viewType: "list",
+  dateJump: "week",
+  language: "",
   options: {
-    token: '',
+    token: "",
   },
 };
 
@@ -14,22 +20,27 @@ export default function reducer(state = initialState, action) {
     case UPDATE_OPTIONS:
       return {
         ...state,
-        options: action.payload
+        options: action.payload,
+      };
+    case UPDATE_AUTH_TOKEN:
+      return {
+        ...state,
+        oauth: action.payload,
       };
     case UPDATE_DATE_TYPE:
       return {
         ...state,
-        dateJump: action.payload
+        dateJump: action.payload,
       };
     case UPDATE_VIEW_TYPE:
       return {
         ...state,
-        viewType: action.payload
+        viewType: action.payload,
       };
     case UPDATE_LANGUAGE:
       return {
         ...state,
-        language: action.payload
+        language: action.payload,
       };
     default:
       return state;

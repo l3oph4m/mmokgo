@@ -43,7 +43,7 @@ class TopNav extends React.Component {
             {!isRunningExtension && (
               <a
                 href="#"
-                target="_blank"
+                // target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-danger d-none d-sm-none d-md-inline-block d-xl-inline-block d-lg-inline-block"
               >
