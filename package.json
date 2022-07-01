@@ -1,6 +1,6 @@
 {
-  "name": "githunt-react",
-  "version": "0.1.2",
+  "name": "smaztech-mmokgo",
+  "version": "0.1.5",
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
