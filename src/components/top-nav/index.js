@@ -24,10 +24,10 @@ class TopNav extends React.Component {
             <div className="logo-text">
               <h4>MMOK-GO</h4>
               <p className="text-muted d-none d-sm-inline-block d-md-inline-block d-xl-inline-block d-lg-inline-block">
-                New ways of tiktok enjoyment.
+                Your fans' great moments become NTFs!
               </p>
               <p className="text-muted d-inline-block d-sm-none d-md-none d-xl-none d-lg-none">
-                New MMO ways.
+                Fans'NFTs!
               </p>
             </div>
           </a>
